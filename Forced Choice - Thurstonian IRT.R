@@ -11,9 +11,6 @@ data <- read.csv(
 )
 
 #### para ajustar o banco ####
-?RecodeFCit::data
-head(data)
-checkTie(data)
 ?recodeErrors
 data2<-recodeErrors(banco,Cd=c("a","b","c"))
 
