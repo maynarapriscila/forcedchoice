@@ -1,3 +1,8 @@
+Install.packages(c("lavaan", "thurstonianIRT",
+                   "readr", "devtools"))
+library(devtools)
+remotes::install_github(“felipevalentini/RecodeFCit”)
+
 library(RecodeFCit)
 library(lavaan)
 library(thurstonianIRT)
