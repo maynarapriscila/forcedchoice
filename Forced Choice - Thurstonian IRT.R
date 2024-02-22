@@ -77,4 +77,4 @@ triplets_long <- make_TIRT_data(data = dataLavaan,
 fit <- fit_TIRT_lavaan(triplets_long,
                        estimator = 'WLSMV')
 
-summary(fit, fit.measures=T, standardized = T)
+summary(fit, fit.measures=T)
