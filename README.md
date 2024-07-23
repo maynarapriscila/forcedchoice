@@ -1,3 +1,3 @@
-Artigo - Teoria de Resposta ao Item Thurstoniana para medida de escolha forçada: Tutorial de aplicação no R
+Article - Thurstonian Item Response Theory for forced choice measurement: Application tutorial in R
 
-Nesse repertório você irá encontrar o script para conseguir codificar os dados e evitar escores ipsativos, além do código para realizar a Teoria de Resposta ao Item Thurstoniana para o questionário de escolha forçada. Fique à vontade para usar os recursos e tirar qualquer dúvida. 
+In this repertoire you will find the script to be able to code the data and avoid ipsative scores, in addition to the code to perform the Thurstonian Item Response Theory for the forced choice questionnaire. Feel free to use the resources and ask any questions.
