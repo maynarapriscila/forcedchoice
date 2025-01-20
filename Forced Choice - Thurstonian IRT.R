@@ -8,14 +8,14 @@ library(lavaan)
 library(thurstonianIRT)
 library(readr)
 
-#### carregar o banco ####
+#### load the database ####
 data <- read.csv(
   url(
     "https://github.com/maynarapriscila/forcedchoice/raw/main/data.csv"
   ), sep =  ";"
 )
 
-#### para ajustar o banco ####
+#### to adjust the database ####
 ?recodeErrors
 data2<-recodeErrors(banco,Cd=c("a","b","c"))
 
@@ -23,7 +23,7 @@ data2<-recodeErrors(banco,Cd=c("a","b","c"))
 datacod <- recodeData(data2, Cd=c ("a", "b","c"))
 dataLavaan <- datacod[-c(1,2),]
 
-#### define os blocos de itens ####
+#### defines item blocks ####
 blocks <-
   set_block(c("i1", "i2", "i3"), traits = c("t1", "t2", "t4"), 
             signs = c(1, 1, 1)) +
@@ -66,13 +66,13 @@ blocks <-
   set_block(c("i58", "i59", "i60"), traits = c("t2", "t3", "t4"), 
             signs = c(1, 1, 1))
 
-#### gerar os dados ####
+#### generate the data ####
 ?make_TIRT_data
 triplets_long <- make_TIRT_data(data = dataLavaan,
                                 blocks = blocks,
                                 format = "pairwise")
 
-#### Ajuste dos dados usando o Lavaan ####
+#### Fitting data using Lavaan ####
 ?fit_TIRT_lavaan
 fit <- fit_TIRT_lavaan(triplets_long,
                        estimator = 'WLSMV')
